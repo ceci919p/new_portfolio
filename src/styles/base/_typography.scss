@@ -1,0 +1,47 @@
+@use "../abstracts/mixins";
+@use "../abstracts/vars";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@mixin p-font {
+  font-family: Inter, sans-serif;
+  font-weight: regular;
+  color: vars.$dark;
+}
+
+p {
+  @include p-font;
+}
+
+@mixin heading-font {
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  color: vars.$dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include heading-font;
+}
+
+@mixin h1-size($n) {
+  font-size: $n * 4.209rem;
+}
+@mixin h2-size($n) {
+  font-size: $n * 3.157rem;
+}
+@mixin h3-size($n) {
+  font-size: $n * 2.369rem;
+}
+@mixin h4-size($n) {
+  font-size: $n * 1.777rem;
+}
+@mixin h5-size($n) {
+  font-size: $n * 1.333rem;
+}
+@mixin p-size($n) {
+  font-size: $n * 1rem;
+}
