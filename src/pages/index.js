@@ -1,4 +1,5 @@
 import Head from "next/head";
+import About from "@/components/home_sections/About";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <section></section>
+        <About></About>
       </main>
     </>
   );
