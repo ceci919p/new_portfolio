@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
+          className={`${navActive ? "active" : ""} nav__menu-bar`}
         >
           <div></div>
           <div></div>

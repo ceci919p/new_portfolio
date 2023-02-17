@@ -13,7 +13,7 @@ header {
 }
 nav {
   display: flex;
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   padding-inline: 2rem;
   justify-content: space-between;
   align-items: center;
@@ -24,13 +24,61 @@ nav {
   flex-direction: column;
   row-gap: 6px;
   cursor: pointer;
+  position: relative;
 }
 .nav__menu-bar div {
   width: 40px;
   height: 4px;
   background-color: black;
   border-radius: 2px;
+  transition: all 0.3s;
 }
+
+/*animation will be in order
+on click second bar scales to 0 
+first and second bar translates position to second bar 
+first bar rotates 45 and third bar rotates 135 
+
+while reversing
+everything gets reverted 
+*/
+
+/*Animation for second bar*/
+.nav__menu-bar.active div:nth-child(2) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/*animating first bar translate to second bar pos and rotate*/
+.nav__menu-bar.active div:nth-child(1) {
+  animation: bar1Anim 0.3s ease-in-out forwards; /*forwars maintain transform while animating*/
+}
+
+@keyframes bar1Anim {
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(8px) rotateZ(45deg);
+  }
+}
+
+/*animating third bar translate to second bar pos and rotate*/
+.nav__menu-bar.active div:nth-child(3) {
+  animation: bar2Anim 0.3s ease-in-out forwards; /*forwars maintain transform while animating*/
+}
+
+@keyframes bar2Anim {
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(-12px) rotateZ(-45deg);
+  }
+}
+
+/*now we will reverse the animation*/
+
 .nav__menu-list {
   display: flex;
   flex-direction: column;
@@ -39,7 +87,6 @@ nav {
   width: 288px;
   row-gap: 24px;
   right: -288px;
-  /*   padding: 24px 16px; */
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
   background-color: vars.$light;
