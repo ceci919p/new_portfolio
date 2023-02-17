@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import NavItem from "./NavItem";
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
   { text: "About", href: "/#about" },
+  { text: "Projects", href: "/#projects" },
+  { text: "Playground", href: "/playground" },
   { text: "Contact", href: "mailto:ceciliejrg@hotmail.com" },
 ];
 const Navbar = () => {
@@ -26,9 +27,9 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <ul className={`${navActive ? "active" : ""} nav__menu-list`}>
           {MENU_LIST.map((menu, idx) => (
-            <div
+            <li
               onClick={() => {
                 setActiveIdx(idx);
                 setNavActive(false);
@@ -36,9 +37,9 @@ const Navbar = () => {
               key={menu.text}
             >
               <NavItem active={activeIdx === idx} {...menu} />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </nav>
     </header>
   );

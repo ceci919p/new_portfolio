@@ -9,7 +9,8 @@
   color: vars.$dark;
 }
 
-p {
+p,
+a {
   @include p-font;
 }
 

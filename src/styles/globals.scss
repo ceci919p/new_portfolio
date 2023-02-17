@@ -1,5 +1,6 @@
 @use "layout";
 @use "base";
+@use "abstracts/vars";
 
 a {
   text-decoration: none;
@@ -12,10 +13,11 @@ header {
 }
 nav {
   display: flex;
-  padding: 16px;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: vars.$light;
 }
 .nav__menu-bar {
   display: flex;
@@ -33,14 +35,14 @@ nav {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 60px;
+  top: 50px;
   width: 288px;
   row-gap: 24px;
   right: -288px;
-  padding: 24px 16px;
+  /*   padding: 24px 16px; */
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #f1f1f1;
+  background-color: vars.$light;
 }
 .nav__menu-list.active {
   right: 0;
