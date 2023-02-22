@@ -1,10 +1,41 @@
 /*Style for home page*/
 
+@use "../abstracts/vars";
+
 li {
   list-style-type: none;
 }
 
 #splash {
-  background-color: black;
-  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$dark;
+  height: 100vh;
+
+  p {
+    color: white;
+    margin: 0;
+  }
+}
+
+#about {
+  p {
+    padding-inline: 3.125rem;
+    padding-block: 11rem;
+    font-size: 2.875rem;
+    margin: auto;
+  }
+}
+
+#projects {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$dark;
+
+  p {
+    color: vars.$light;
+  }
 }

@@ -1,5 +1,7 @@
 import Head from "next/head";
 import About from "@/components/home_sections/About";
+import Splash from "@/components/home_sections/Splash";
+import Gallery from "@/components/home_sections/Gallery";
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       </Head>
 
       <main>
+        <Splash></Splash>
         <About></About>
+        <Gallery></Gallery>
       </main>
     </>
   );
