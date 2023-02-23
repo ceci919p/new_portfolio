@@ -36,7 +36,12 @@ const Navbar = () => {
               }}
               key={menu.text}
             >
-              <NavItem active={activeIdx === idx} {...menu} />
+              <NavItem
+                active={activeIdx === idx}
+                text={menu.text}
+                href={menu.href}
+                navActive={navActive}
+              />
             </li>
           ))}
         </ul>

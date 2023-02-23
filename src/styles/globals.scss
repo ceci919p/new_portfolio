@@ -105,6 +105,13 @@ nav {
   }
 }
 
+.nav__menu-link.button {
+  background-color: vars.$dark;
+  color: vars.$light;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
 .nav__menu-list {
   display: flex;
   flex-direction: column;
