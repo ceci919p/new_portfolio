@@ -18,6 +18,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: vars.$light;
+  box-shadow: 0 1px 8px -4px #737373;
 }
 .nav__menu-bar {
   display: flex;
