@@ -2,6 +2,7 @@ import Head from "next/head";
 import About from "@/components/home_sections/About";
 import Splash from "@/components/home_sections/Splash";
 import Gallery from "@/components/home_sections/Gallery";
+import Banner from "@/components/home_sections/banner";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <main>
         <Splash></Splash>
         <About></About>
+        <Banner></Banner>
+
         <Gallery></Gallery>
       </main>
     </>

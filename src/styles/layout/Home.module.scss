@@ -39,3 +39,13 @@ li {
     color: vars.$light;
   }
 }
+
+#banner {
+  p {
+    font-size: 5rem;
+    color: vars.$accent;
+    opacity: 69%;
+    font-weight: bold;
+    margin-block-end: 11rem;
+  }
+}
