@@ -1,6 +1,7 @@
 /*Style for home page*/
 
 @use "../abstracts/vars";
+@use "../base/typography";
 
 li {
   list-style-type: none;
@@ -46,6 +47,33 @@ li {
     color: vars.$accent;
     opacity: 69%;
     font-weight: bold;
-    margin-block-end: 11rem;
+    /*   margin-block-end: 11rem; */
   }
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 20px auto;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: vars.$accent;
+  opacity: 69%;
+  font-size: 4rem;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
 }
