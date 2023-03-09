@@ -1,7 +1,17 @@
-export default function Gallery() {
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Gallery({ thumbnail }) {
+  const img = thumbnail.responsiveImage;
+
   return (
-    <section id="projects">
-      <p>This is the gallery</p>
-    </section>
+    <Image
+      className="thumbnail"
+      src={img.src}
+      alt={img.alt}
+      width={img.width}
+      height={img.height}
+      sizes={img.sizes}
+    ></Image>
   );
 }
