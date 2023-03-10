@@ -1,6 +1,7 @@
 @use "layout";
 @use "base";
 @use "abstracts/vars";
+@use "abstracts/mixins";
 
 a {
   text-decoration: none;
@@ -179,18 +180,31 @@ nav {
 }
 
 footer {
+  padding: 0;
+  margin-inline: 1.25rem;
   background-color: vars.$light;
-  margin: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   ul {
-    display: flex;
-    gap: 5rem;
-    margin: auto;
+    @include mixins.for-tablet-portrait {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  ul li {
+    margin-block: 0.7rem;
+  }
+
+  ul,
+  .socials {
+    padding: 0;
   }
 
   .socials {
-    gap: 0.5rem;
+    display: flex;
+    gap: 0.7rem;
   }
 }
