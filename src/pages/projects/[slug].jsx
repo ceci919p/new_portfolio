@@ -1,5 +1,7 @@
 import { slugData, singleProjectData } from "../../queries";
 import SingleProject from "../../components/site_layout/SingleProject";
+import intro from "@/components/blocks/intro";
+import section from "@/components/blocks/section";
 
 export default function singlepageData({ data }) {
   return <SingleProject {...data} />;

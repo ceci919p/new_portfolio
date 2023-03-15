@@ -63,62 +63,11 @@ export async function singleProjectData(slug) {
     body: JSON.stringify({
       query: `query MyQuery {
   project(filter: {slug: {eq: "${slug}"}}) {
+    id
+    title
     skills
     semester
     slug
-    title
-    intro {
-      description
-      githublink
-      link
-      id
-      year
-    }
-    process {
-      text
-      id
-      image {
-        responsiveImage {
-          alt
-          height
-          sizes
-          src
-          srcSet
-          width
-        }
-      }
-      heading
-    }
-    design {
-      id
-      text
-      heading
-      image {
-        responsiveImage {
-          alt
-          height
-          sizes
-          src
-          srcSet
-          width
-        }
-      }
-    }
-    code {
-      id
-      text
-      heading
-      image {
-        responsiveImage {
-          alt
-          height
-          sizes
-          src
-          srcSet
-          width
-        }
-      }
-    }
     splash {
       responsiveImage {
         alt
@@ -127,6 +76,32 @@ export async function singleProjectData(slug) {
         src
         srcSet
         width
+      }
+    }
+    components {
+      ... on IntroRecord {
+        id
+        description
+        githublink
+        link
+        year
+        _modelApiKey
+      }
+      ... on SectionRecord {
+        id
+        _modelApiKey
+        heading
+        text
+        image {
+          responsiveImage {
+            alt
+            height
+            sizes
+            src
+            srcSet
+            width
+          }
+        }
       }
     }
   }
