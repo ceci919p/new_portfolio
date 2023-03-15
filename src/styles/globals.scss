@@ -127,6 +127,11 @@ nav {
   text-align: center;
   padding-inline-start: 0; */
 }
+
+.nav__menu-list li {
+  list-style-type: none;
+}
+
 .nav__link {
   font-size: 1rem;
   position: relative;
@@ -196,6 +201,10 @@ footer {
 
   ul li {
     margin-block: 0.7rem;
+  }
+
+  li {
+    list-style: none;
   }
 
   ul,

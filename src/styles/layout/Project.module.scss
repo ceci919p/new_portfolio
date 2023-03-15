@@ -1,5 +1,53 @@
 /*Style for project singlepage*/
 
+@use "../abstracts/mixins";
+
 .splash {
   margin-inline: auto;
+  object-fit: contain;
+  padding: 3rem;
+  height: 100%;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.back svg {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.back:hover svg {
+  transform: translateX(-30%);
+}
+
+.skills p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+
+  @include mixins.for-tablet-portrait {
+    font-size: 0.9rem;
+  }
+}
+
+.skills {
+  display: flex;
+  gap: 0.3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.singlep_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  @include mixins.for-tablet-portrait {
+    padding: 2rem;
+    padding-block: 1.25rem;
+  }
 }

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 
+import { BsArrowLeft } from "react-icons/bs";
+
 export default function SingleProject({
   title,
   skills,
@@ -27,6 +29,21 @@ export default function SingleProject({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+      <section className="singlep_top">
+        <Link className="back" href={"/#projects"}>
+          <BsArrowLeft />
+          <p>Back</p>
+        </Link>
+
+        <ul className="skills">
+          {skills.map((d) => (
+            <li key={d.id}>
+              <p>{d.title}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <Image
         className="splash"
         src={img.src}
@@ -34,7 +51,7 @@ export default function SingleProject({
         width={img.width}
         height={img.height}
         sizes={img.sizes}
-      ></Image>
+      />
     </>
   );
 }

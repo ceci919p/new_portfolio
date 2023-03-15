@@ -4,10 +4,6 @@
 @use "../base/typography";
 @use "../abstracts/mixins";
 
-li {
-  list-style-type: none;
-}
-
 #splash {
   display: flex;
   justify-content: center;
